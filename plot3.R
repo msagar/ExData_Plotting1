@@ -1,3 +1,4 @@
+#Libraries Needed For The Script
 library(dplyr)
 library(data.table)
 library(lubridate)
@@ -19,8 +20,6 @@ downloadeddata$datetime <- parse_date_time(downloadeddata$datetime,"dmYHMS")
 downloadeddata$Date <- parse_date_time(downloadeddata$Date,"%d%m%Y")
 downloadeddata$Time <- parse_date_time(downloadeddata$Time,"HMS")
 
-# downloadeddata$Date <- lapply(downloadeddata$Date,function (x)as.Date.factor(x,format = "%d/%m/%Y") )
-# downloadeddata$Time <- lapply(downloadeddata$Time, function(x) strptime(x,format = "%H:%M:%S"))
 
 #Extract the 2 day data that we are interested in
 feb1daydata <- downloadeddata[which(downloadeddata$Date == as.Date("2007-02-01",format = "%Y-%m-%d")),]

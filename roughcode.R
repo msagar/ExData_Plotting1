@@ -56,3 +56,12 @@ plot(as.POSIXct(paste(realdata$Date, realdata$Time), format="%d/%m/%Y %H:%M:%S",
                 realdata$Global_active_power, type="l" ))
 
 marchdata <- filter(tempdownloadeddata, tempdownloadeddata == as_date("01-03-2007"))
+
+# downloadeddata$Date <- lapply(downloadeddata$Date,function (x)as.Date.factor(x,format = "%d/%m/%Y") )
+# downloadeddata$Time <- lapply(downloadeddata$Time, function(x) strptime(x,format = "%H:%M:%S"))
+# downloadeddata$Date <- lapply(downloadeddata$Date,function (x)as.Date.factor(x,format = "%d/%m/%Y") )
+# downloadeddata$Time <- lapply(downloadeddata$Time, function(x) strptime(x,format = "%H:%M:%S"))
+
+
+# downloadeddata$Date <- lapply(downloadeddata$Date,function (x)as.Date.factor(x,format = "%d/%m/%Y") )
+# downloadeddata$Time <- lapply(downloadeddata$Time, function(x) strptime(x,format = "%H:%M:%S"))
